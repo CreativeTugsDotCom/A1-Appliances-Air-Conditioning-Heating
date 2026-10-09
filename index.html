@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A1 Appliances, Air Conditioning & Heating | Bryan-College Station Since 1990</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e3a8a', // Professional Navy Blue
+                        secondary: '#0284c7', // Cool Blue Accent
+                        lightbg: '#f8fafc',
+                        accent: '#0ea5e9'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom animations & smooth styling */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-cyan-100 selection:text-primary">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo from user provided image -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="logo for.png" alt="A1 Appliance & Air Conditioning Logo" class="h-12 w-auto object-contain group-hover:scale-105 transition-transform" onerror="this.src='https://placehold.co/180x50/1e3a8a/ffffff?text=A1+APPLIANCES'">
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600">
+                <a href="#about" class="hover:text-primary transition-colors">About Us</a>
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-primary transition-colors">Why Choose Us</a>
+                <a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="tel:+19795957272" class="flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-primary px-4 py-2.5 rounded-xl font-bold text-sm transition-all shadow-sm">
+                    <i class="fa-solid fa-phone-volume text-secondary animate-pulse"></i>
+                    <span>(979) 595-7272</span>
+                </a>
+                <a href="#contact" class="bg-primary hover:bg-blue-900 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-md hover:shadow-lg">
+                    Request Service
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2 text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-6 py-4 space-y-3 shadow-xl">
+            <div class="pb-2">
+                <img src="logo for.png" alt="A1 Logo" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/150x40/1e3a8a/ffffff?text=A1+APPLIANCES'">
+            </div>
+            <a href="#about" class="block text-slate-700 font-medium py-1 hover:text-primary">About Us</a>
+            <a href="#services" class="block text-slate-700 font-medium py-1 hover:text-primary">Services</a>
+            <a href="#why-us" class="block text-slate-700 font-medium py-1 hover:text-primary">Why Choose Us</a>
+            <a href="#testimonials" class="block text-slate-700 font-medium py-1 hover:text-primary">Testimonials</a>
+            <a href="#contact" class="block text-slate-700 font-medium py-1 hover:text-primary">Contact</a>
+            <div class="pt-3 border-t border-slate-100 flex flex-col gap-3">
+                <a href="tel:+19795957272" class="flex items-center justify-center gap-2 bg-slate-100 text-primary px-4 py-3 rounded-xl font-bold">
+                    <i class="fa-solid fa-phone-volume text-secondary"></i> Call (979) 595-7272
+                </a>
+                <a href="#contact" class="flex items-center justify-center bg-primary text-white px-4 py-3 rounded-xl font-semibold">
+                    Request Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left fade-in">
+                    <div class="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200 text-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-sm">
+                        <i class="fa-solid fa-shield-halved"></i> Serving Bryan & College Station Since 1990
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Reliable HVAC & <span class="text-secondary">Appliance Repair</span> Since 1990
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Specializing in air conditioning, heating, and large appliance repair and installation! Proudly serving Bryan, College Station and the surrounding areas since 1990.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="tel:+19795957272" class="w-full sm:w-auto bg-primary hover:bg-blue-900 text-white font-bold px-8 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3 text-base">
+                            <i class="fa-solid fa-phone-volume text-cyan-400 text-lg"></i>
+                            <span>Call Now: (979) 595-7272</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-primary border-2 border-primary/20 hover:border-primary font-semibold px-8 py-4 rounded-2xl transition-all shadow-sm flex items-center justify-center gap-2 text-base">
+                            <span>Request Service</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                    </div>
+                    <div class="pt-6 flex items-center justify-center lg:justify-start gap-6 text-slate-500 text-sm font-medium">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> Licensed & Insured
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> Locally Owned
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-secondary"></i> 30+ Years Experience
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image Grid / Showcase with precise AC & HVAC specialist visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Air Conditioning and Heating Specialist servicing equipment" 
+                                 class="w-full h-[380px] sm:h-[450px] object-cover hover:scale-105 transition-transform duration-700"
+                                 onerror="this.src='https://placehold.co/600x450/1e3a8a/ffffff?text=A1+HVAC+Service'">
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-slate-100 hidden sm:flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-cyan-100 text-secondary flex items-center justify-center font-bold text-xl">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">34+ Years</h4>
+                                <p class="text-xs text-slate-500">Trusted Local Expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" 
+                                 alt="HVAC unit maintenance and repair" 
+                                 class="rounded-2xl shadow-lg object-cover h-64 w-full"
+                                 onerror="this.src='https://placehold.co/400x300/0284c7/ffffff?text=HVAC+Technician'">
+                            <div class="bg-primary text-white p-6 rounded-2xl shadow-md">
+                                <span class="text-3xl font-black block">1990</span>
+                                <span class="text-xs uppercase tracking-wider text-cyan-200 font-semibold">Serving Brazos Valley</span>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600&auto=format&fit=crop" 
+                                 alt="Kitchen appliance repair and maintenance" 
+                                 class="rounded-2xl shadow-lg object-cover h-80 w-full"
+                                 onerror="this.src='https://placehold.co/400x400/1e3a8a/ffffff?text=Appliance+Repair'">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-blue-50 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-house-chimney"></i> About A1 Appliances, AC & Heating
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Specializing in Air Conditioning, Heating & Large Appliance Repair!
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Since 1990, A1 Appliances, Air Conditioning & Heating has been a trusted cornerstone for residential comfort throughout Bryan, College Station, and the surrounding Texas communities. We specialize in comprehensive air conditioning, heating, and large appliance repair and installation.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        Whether your AC unit needs immediate diagnostics during peak summer heat or your kitchen and laundry appliances require professional servicing, our experienced technicians deliver prompt, reliable, and honest workmanship every time.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 pt-4">
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Quality Workmanship</h4>
+                            <p class="text-sm text-slate-500 mt-1">Precise repairs done right the first time.</p>
+                        </div>
+                        <div class="border-l-4 border-secondary pl-4">
+                            <h4 class="font-bold text-slate-900 text-lg">Honest Pricing</h4>
+                            <p class="text-sm text-slate-500 mt-1">Transparent estimates with no hidden surprises.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-blue-50 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-star"></i> The A1 Difference
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Why Homeowners in Bryan & College Station Choose Us
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        For over three decades, our dedication to excellence in air conditioning, heating, and large appliance repair has earned the trust of local families across the Brazos Valley.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Local Experience Since 1990</h4>
+                                <p class="text-slate-600 text-sm mt-1">Deep roots in Bryan and College Station mean we understand local climate challenges and housing needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Dependable, Prompt Service</h4>
+                                <p class="text-slate-600 text-sm mt-1">We respect your time with punctual arrivals, clear communication, and efficient turnaround times.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start bg-slate-50 p-4 rounded-2xl border border-slate-100">
+                            <div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-base">Specialized Technical Workmanship</h4>
+                                <p class="text-slate-600 text-sm mt-1">Expert handling of air conditioning, heating systems, and major household appliances.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop" 
+                             alt="Professional HVAC and Appliance Technicians working" 
+                             class="w-full h-[500px] object-cover"
+                             onerror="this.src='https://placehold.co/600x500/1e3a8a/ffffff?text=Why+Choose+A1'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <div class="inline-flex items-center gap-2 bg-cyan-50 text-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-comments"></i> Customer Feedback
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    Trusted by Local Homeowners
+                </h2>
+                <p class="text-slate-600 text-lg">
+                    Read verified feedback from our valued customers across the Brazos Valley.
+                </p>
+            </div>
+
+            <!-- Testimonial Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-base leading-relaxed">
+                            "A1 Appliances has been our go-to for AC and home appliance repairs for years. Always prompt, professional, and fair with pricing. Highly recommend!"
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Local Homeowner</h4>
+                            <p class="text-xs text-slate-500">Bryan, TX</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-base leading-relaxed">
+                            "Our AC stopped working on one of the hottest days of summer. They came out quickly, diagnosed the issue, and had us cool and comfortable in no time."
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900">College Station Resident</h4>
+                            <p class="text-xs text-slate-500">College Station, TX</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <div class="text-amber-400 flex gap-1 text-sm">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-slate-700 italic text-base leading-relaxed">
+                            "Very knowledgeable technicians. Fixed our refrigerator compressor efficiently and gave us great maintenance tips. Fantastic customer service!"
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                        <div>
+                            <h4 class="font-bold text-slate-900">Satisfied Customer</h4>
+                            <p class="text-xs text-slate-500">Brazos Valley</p>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-blue-50 text-primary flex items-center justify-center font-bold text-sm">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-primary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                Need HVAC or Appliance Repair? Let’s Get It Fixed!
+            </h2>
+            <p class="text-cyan-100 text-lg max-w-2xl mx-auto">
+                Specializing in air conditioning, heating and large appliance repair and installation! Call our experienced team today.
+            </p>
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="tel:+19795957272" class="bg-white text-primary hover:bg-cyan-50 font-extrabold px-8 py-4 rounded-2xl shadow-xl transition-all flex items-center gap-3 text-lg">
+                    <i class="fa-solid fa-phone-volume text-secondary"></i>
+                    <span>Call Now: (979) 595-7272</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Info Side -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 bg-blue-50 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-envelope"></i> Get In Touch
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                            Contact A1 Appliances & HVAC
+                        </h2>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Proudly serving Bryan, College Station, and surrounding areas since 1990. Reach out to us via phone or submit a service inquiry.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Phone Number</h4>
+                                <a href="tel:+19795957272" class="text-primary font-bold text-lg hover:underline">(979) 595-7272</a>
+                            </div>
+                        </div>
+
+                        <!-- Service Area -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Service Area</h4>
+                                <p class="text-slate-600 font-medium">Bryan & College Station, Texas</p>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-primary text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Business Hours</h4>
+                                <p class="text-slate-600 font-medium">Monday – Friday: 8:00 AM – 5:00 PM</p>
+                                <p class="text-slate-500 text-xs mt-0.5">Saturday & Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Side -->
+                <div class="lg:col-span-7 bg-slate-50 p-8 sm:p-10 rounded-3xl border border-slate-100 shadow-sm relative">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-2">Request Service</h3>
+                    <p class="text-slate-600 text-sm mb-6">Fill out the form below and our team will get back to you promptly.</p>
+                    
+                    <form id="service-form" class="space-y-4" onsubmit="handleFormSubmit(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Phone Number</label>
+                                <input type="tel" id="phone" required placeholder="(979) 000-0000" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Service Needed</label>
+                            <select id="service-type" class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm">
+                                <option value="AC Repair">AC Repair & Installation</option>
+                                <option value="Heating Repair">Heating System Repair</option>
+                                <option value="Appliance Repair">Major Appliance Repair</option>
+                                <option value="Appliance Installation">Appliance Installation</option>
+                                <option value="Other">Other Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Message / Details</label>
+                            <textarea id="message" rows="4" required placeholder="Please describe the issue or service required..." class="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-primary text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-900 text-white font-bold py-4 rounded-xl shadow-md transition-all text-base flex items-center justify-center gap-2">
+                            <span>Submit Request</span>
+                            <i class="fa-solid fa-paper-plane text-sm"></i>
+                        </button>
+                    </form>
+
+                    <!-- Success Message Box -->
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl text-sm font-medium flex items-center gap-3">
+                        <i class="fa-solid fa-circle-check text-emerald-600 text-lg"></i>
+                        <span>Thank you! Your service request has been received. We will contact you shortly.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3 bg-white/5 p-3 rounded-2xl w-fit">
+                        <img src="logo for.png" alt="A1 Logo Footer" class="h-10 w-auto object-contain" onerror="this.src='https://placehold.co/150x40/ffffff/1e3a8a?text=A1+APPLIANCES'">
+                    </div>
+                    <p class="text-sm leading-relaxed text-slate-400 max-w-sm">
+                        Specializing in air conditioning, heating and large appliance repair and installation! Serving Bryan, College Station and surrounding areas since 1990.
+                    </p>
+                    <div class="pt-2">
+                        <a href="tel:+19795957272" class="inline-flex items-center gap-2 text-white font-bold bg-primary px-4 py-2 rounded-xl text-sm shadow">
+                            <i class="fa-solid fa-phone text-secondary"></i> (979) 595-7272
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Our Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><span class="hover:text-white transition-colors">AC Repair & Installation</span></li>
+                        <li><span class="hover:text-white transition-colors">Heating System Repair</span></li>
+                        <li><span class="hover:text-white transition-colors">Major Appliance Repair</span></li>
+                        <li><span class="hover:text-white transition-colors">Appliance Installation</span></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider">Service Area</h4>
+                    <p class="text-sm leading-relaxed">
+                        Proudly serving Bryan, College Station, and the surrounding Brazos Valley area.
+                    </p>
+                    <p class="text-xs text-slate-500 font-semibold uppercase tracking-wider pt-2">
+                        Hours: Mon-Fri 8:00 AM - 5:00 PM
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 1990 - 2026 A1 Appliances, Air Conditioning & Heating. All rights reserved.</p>
+                <p class="text-slate-400 font-medium">Bryan & College Station, Texas</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Service form submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successBox = document.getElementById('form-success');
+            successBox.classList.remove('hidden');
+            document.getElementById('service-form').reset();
+            setTimeout(() => {
+                successBox.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
